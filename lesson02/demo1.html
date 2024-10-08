@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			// 文档加载完成
+			
+			window.onload=function(){
+				alert('onload2')
+			}
+			// jquery对象.属性	jquery对象.方法
+			// dom对象 -> jquery对象
+			$(document).ready(function(){
+				alert("ready1")
+			})
+			$(function(){
+				alert("ready2")
+			})
+			/* 
+				window.onload与$(document).ready()区别
+				1.window.onload只执行一次，ready()可以执行多次
+				2.ready()事件有缩写
+				3.ready()事件只要网页中DOM结构绘制完成就执行，
+					onload所有内容加载完毕后才能执行
+			 */
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

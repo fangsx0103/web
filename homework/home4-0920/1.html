@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<style>
+			ul{
+				list-style: none;
+			}
+			body{
+				background: #000;
+			}
+			.wrap{
+				margin: 100px auto 0;
+				width: 630px;
+				height: 394px;
+				padding: 10px 0 0 10px;
+				background: #000;
+				overflow: hidden;
+				border: 1px solid #fff;
+			}
+			.wrap ul{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.wrap li{
+				margin: 0 10px 10px 0;
+				opacity: 0.4;
+			}
+		</style>
+		<script>
+			$(function(){
+				$('ul li').hover(function() {
+						$(this).css('opacity', 1)
+						$('ul li').not(this).css('opacity', 0.4)
+					}
+				)
+			})
+		</script>
+	</head>
+	<body>
+		<div class="wrap">
+			<ul>
+				<li><a href="#"><img src="images/01.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/02.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/03.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/04.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/05.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/06.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</body>
+</html>

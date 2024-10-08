@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>二级导航</title>
+		<Script src="../js/jquery-3.7.1.min.js"></Script>
+		<style>
+			.one{
+				width: 240px;
+				background-color: bisque;
+				border: 2px solid #ccc;
+			}
+			.summary{
+				background-color: darkorange;
+				padding: 10px;
+			}
+			.two{
+				display: none;
+				padding: 20px;
+			}
+			.active{
+				display: block;
+			}
+		</style>
+		<script>
+			$(function(){
+				// 事件
+				// 对象.方法，对象.属性
+				/* $('.summary').click(function(e){
+					// 点击元素后面的.two的元素展开
+					// this dom -> jquery
+					$('.summary + .two').css('display','none')
+					$(this).next('.two').css('display','block')
+					
+				}) */
+				/* $('.summary').click(function(e){
+					$('.summary + .two').removeClass('active')
+					$(this).next('.two').addClass('active')
+					
+				}) */
+				$('.summary').click(function(){
+					$('.two').hide()
+					$(this).next('.two').show()
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div class="one">
+			<div class="summary">学生管理</div>
+			<div class="two">
+				<ul>
+					<li>信息管理</li>
+					<li>成绩管理</li>
+					<li>考勤管理</li>
+				</ul>
+			</div>
+		</div>
+		<div class="one">
+			<div class="summary">文档管理</div>
+			<div class="two">资料管理</div>
+		</div>
+		<div class="one">
+			<div class="summary">课程管理</div>
+			<div class="two">教案管理</div>
+		</div>
+	</body>
+</html>

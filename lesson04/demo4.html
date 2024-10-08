@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>过滤选择器</title>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<style>
+			li{
+				line-height: 35px;
+			}
+		</style>
+		<script>
+			$(function(){
+				// 第1,2,3个设置底部边框线（2px 蓝 实线）
+				$("li:lt(3)").css('border-bottom','1px solid blue')
+				// 第1个和最后1个设置红色文字
+				$("li:first,li:last").css('color','red')
+				// 1,3,5行加背景色
+				$("li:even").css('background-color','pink')
+				// 除.no的元素外统一将文字加粗
+				$("li:not('.no')").css('font-weight','bold')
+			})
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>我是第1个li</li>
+			<li>我是第2个li</li>
+			<li class="no">我是第3个li</li>
+			<li>我是第4个li</li>
+			<li>我是第5个li</li>
+		</ul>
+		
+		<ul class="father">
+			<li class="stu-manage">学生管理
+				<ul>
+					<li>信息管理</li>
+					<li>成绩管理</li>
+					<li>考勤管理</li>
+				</ul>
+			</li>
+			<li class="course-manage">
+				课程管理
+				<ul>
+					<li>开课管理</li>
+					<li>任课教师管理</li>
+				</ul>
+			</li>
+		</ul>
+	</body>
+</html>
