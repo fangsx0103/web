@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery第一次课</title>
+		<script src="../js/jquery.js"></script>
+		<script type="text/javascript">
+			// $(this).hide() => jQuery(this).hide()
+			// $ 是jQuery对象的替代
+			// $(选择器) 用于获取jQuery对象，$(Dom对象) Dom对象转jQuery对象
+			// 文档加载完成的事件
+			// 对象.属性		对象.方法
+			$(document).ready(function(){
+				$('.red').css('color','red')
+				$('.green').css('color','green')
+				$('.green').click(function(){
+					$(this).hide();
+				})
+				$('.red').click(function(){
+					$('.green').show();
+				})
+			})
+			
+		</script>
+	</head>
+	<body>
+		<div class="red">我是Div元素</div>
+		<p>
+			<h2 class="red">我是h2元素</h2>
+			<b class="green">我不是红色</b>
+		</p>
+	</body>
+</html>

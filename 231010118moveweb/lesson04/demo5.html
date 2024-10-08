@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>子元素（结构伪类）过滤选择器</title>
+		<script src="../js/jquery-3.7.1.min.js"></script>
+		<script>
+			$(function(){
+				$('ul :first-child').css('font-weight',800)
+				$('ul :first').css('color','red')
+				// $('ul :nth-child(odd)').css('border-bottom','1px dashed green')
+			})
+		</script>
+		<style>
+			ul :nth-child(2n+1){
+				border-bottom: 2px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="father">
+			<li class="stu-manage">学生管理
+				<ul>
+					<li>信息管理</li>
+					<li>成绩管理</li>
+					<li>考勤管理</li>
+				</ul>
+			</li>
+			<li class="course-manage">
+				课程管理
+				<ul>
+					<li>开课管理</li>
+					<li>任课教师管理</li>
+				</ul>
+			</li>
+		</ul>
+		<h2>第二个ul</h2>
+		<ul>
+			<li>信息管理</li>
+			<li>成绩管理</li>
+			<li>考勤管理</li>
+		</ul>
+	</body>
+</html>
