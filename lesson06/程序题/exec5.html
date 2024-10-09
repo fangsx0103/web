@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换</title>
+	<style>
+		*{padding:0; margin:0; list-style:none;}
+		.text{ width:1120px; height:30px; margin:5px auto; padding:10px;display:none;}
+		.flash{ width:1120px; height:177px; margin:50px auto 0 auto; padding:10px;}
+		.flash .con{ width:1120px; height:177px;}
+		.flash .con ul li{ width:30px; height:177px; position:relative; overflow:hidden; float:left;}
+		.flash .con ul li.current{ width:1000px;}
+		.flash .con ul li h3{ width:16px; height:147px; color:#fff; font-family:"微软雅黑"; font-size:16px; padding:15px 7px;}
+		.flash .con ul li.ti1 h3{ background:#C30;}
+		.flash .con ul li.ti2 h3{ background:#F0F;}
+		.flash .con ul li.ti3 h3{ background:#09F;}
+		.flash .con ul li.ti4 h3{ background:#0F9;}
+		.show{ position:absolute; left:30px; top:0; width:990px; height:177px; padding:0px 5px 0px 5px;}
+		.show img{ width:960px; height:177px; margin-right:10px; float:left;}
+		@keyframes zq{ from{transform:rotate(0deg);}
+		to{transform:rotate(360deg);}
+		}
+		@-webkit-keyframes zq{ from{-webkit-transform:rotate(0deg);}
+		to{-webkit-transform:rotate(360deg);}
+
+		</style>
+		</head>
+		<body>
+		<div class="flash">
+			<div class="con">
+				<ul>
+					<li class="current ti1" des="工作无非就是日常，但不同的level，应对方式却可能隔着几个中关村。">
+						<h3>日常工作</h3>
+						<div class="show">
+							<img src="images/1.jpg"/>
+						</div>
+					</li>
+					<li class="ti2" des="面对习以为常的bug，小白掀起波澜，大神气定神闲。">
+						<h3>收到警报信息</h3>
+						<div class="show">
+							<img src="images/2.jpg"/>
+						</div>
+					</li>
+					<li class="ti3" des="和产品经理的日常交流，也充斥着满满的火药味。">
+						<h3>对不合理需求</h3>
+						<div class="show">
+							<img src="images/3.jpg"/>
+						</div>
+					</li>
+					<li class="ti4" des="关于感情世界，谁传出的谣言说格子衬衫们注孤生？真实的他们，骚着呢！">
+						<h3>如何哄女朋友</h3>
+						<div class="show">
+							<img src="images/4.jpg"/>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="text"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>网页计算器</title>
+		<!--<script    (1)    ="   (2)    " type="text/javascript" charset="utf-8"></script>-->
+    <script  src="js/index.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+		<!--<p>整数1：<   (3)     id="   (4)    " type="text"></p>-->
+    <p>整数1：<input id="num1" type="text"></p>
+		<!--<p>整数2：<   (3)    id="   (5)    " type="text"></p>-->
+    <p>整数2：<input id="num2" type="text"></p>
+    <p>
+      <input type="button" value="相加"  onclick="calc(add)"><!--点击按钮调用calc函数-->
+      <input type="button" value="相减"  onclick="calc(sub)"><!--点击按钮调用calc函数-->
+      <input type="button" value="相乘"  onclick="calc(mul)"><!--点击按钮调用calc函数-->
+      <input type="button" value="相除"  onclick="calc(div)"><!--点击按钮调用calc函数-->
+    </p>
+		<!--<p>结果：<   (3)     id="result" type="text" readonly></p>-->
+    <p>结果：<input id="result" type="text" readonly></p>
+  </body>
+</html>

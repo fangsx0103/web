@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>过滤选择器</title>
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<style>
+		table{
+			width: 700px;
+			margin: 30px auto;
+			border-collapse: collapse;
+			box-sizing: border-box;
+		}
+		td{
+			padding: 5px;
+			border: 1px solid #7A8C01;
+			text-align: center;
+		}
+		tr:first-child{			
+			font-weight: bold;
+		}
+		.thead{
+			background: #A79496;
+		}
+	</style>
+	<script>
+		$(function(){
+			$('tr:odd').css('background','lightgrey')
+			$('tr:even').css('background','lightblue')
+			$('tr:first').css({
+				'background':'lightgreen',
+				fontWeight:900
+			})
+			// $('tr:nth-child(3) td:gt(2)').css('color','red')
+			$('tr:eq(2)').find('td:gt(2)').css('color','red')
+		})
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>序号</td>
+			<td>学号</td>
+			<td>姓名</td>
+			<td>课程</td>
+			<td>成绩</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>19001</td>
+			<td>张三</td>
+			<td>程序猿入门基础</td>
+			<td>大红灯笼高高挂</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>19002</td>
+			<td>李四</td>			
+			<td>程序猿入门手册</td>
+			<td>勉强及格，有待提高</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>19003</td>
+			<td>王五</td>
+			<td>程序猿入门基础</td>
+			<td>满分，恭喜升级</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>19004</td>
+			<td>赵六</td>
+			<td>程序猿生存手册</td>
+			<td>奔跑吧，小猿</td>			
+		</tr>
+	</table>
+
+</body>
+</html>

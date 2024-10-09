@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery的选择器</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+	<style>
+		button{
+			padding: 5px;
+			border: 1px solid blue;
+			background: lightblue;
+		}
+	</style>
+	<script>
+		$(function(){
+			$('#btn1').click(function(){
+				$('div[class|=my]').css('border','1px solid red')
+			})
+			$('#btn2').click(function(){
+				$('div[data=two]').css({
+					'background':'black',
+					'color':'#fff'
+				})
+			})
+			$('#btn3').click(function(){
+				$('div :contains(樱花)').css('background','pink')
+			})
+		})
+	</script>
+</head>
+<body>    
+    <section>
+        <div id="one" class="animal">
+            <p>猴子</p>
+            <p>猛犸</p>
+            <p>猩猩</p>
+        </div>
+        <div data="two" class="my-plant">
+            <p>牡丹</p>
+            <p>樱花</p>
+            <p>仙人掌</p>
+        </div>
+        <div id='three' class="microbe">
+            <p>细菌</p>
+            <p>蓝细菌</p>
+            <p>放线菌</p>
+            <p>支原体</p>
+        </div>    
+    </section>
+	<p><button id="btn1">将类名有my前缀的div标签设置为1px红实线</button></p>
+	<p><button id="btn2">将data属性值为two的div标签背景设置为黑色/前景色设置为白色</button></p>
+	<p><button id="btn3">将包含内容"樱花"的元素背景色设置为pink</button></p>    
+</body>
+</html>
